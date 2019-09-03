@@ -2,156 +2,279 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Livvic|Ubuntu|Varela+Round&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Tommy's Resume</title>
     <style>
-        *{
-            margin: 0;
-        }
+      *, *::after, *::before {
+     margin: 0;
+     padding: 0;
+     box-sizing: inherit;
+}
+ html {
+     font-size: 62.5%;
+}
+ body {
+     box-sizing: border-box;
+     font-size: 1.6rem;
+     background-color: #2a2a2a;
+     font-family: "Comfortaa", cursive;
+     color: white;
+}
+ h1, h2, h3, h4, h5, h6 {
+     letter-spacing: 0.1rem;
+}
+ .container {
+     width: 100vw;
+     height: 100vh;
+     background-color: #2a2a2a;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+ .container .cv {
+     width: 40%;
+     height: 100vh;
+     background-color: #383838;
+     box-shadow: 0.1rem 0.1rem 1rem #00000050;
+     padding: 1%;
+     border-radius: 0.1rem;
+}
+ .container .cv--header {
+     background-color: #d24c4b;
+     border-radius: 0.1rem;
+     padding: 2.5rem 3.5rem;
+     box-shadow: 0.1rem 0.1rem 1rem #00000030;
+     display: flex;
+     align-items: center;
+}
+ .container .cv--header__img {
+     width: 15rem;
+     height: 15rem;
+     border-radius: 7.5rem;
+     overflow: hidden;
+     box-shadow: 0.1rem 0.1rem 1rem #00000050;
+}
+ .container .cv--header__img img {
+     width: 100%;
+     transform: translateY(-2.5rem);
+}
+ .container .cv--header__details {
+     flex: 1;
+     height: 10rem;
+     margin-left: 2rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+ .container .cv--header__details strong {
+     letter-spacing: 0.2rem;
+}
+ .container .cv--header__details__inner {
+     display: flex;
+     flex-direction: column;
+     opacity: 0.9;
+}
+ .container .cv--body {
+     margin: 3rem 2rem;
+     font-size: 1.4rem;
+     color: #ffffffcc;
+}
+ .container .cv--section {
+     padding-bottom: 1.5rem;
+     border-bottom: 0.3rem solid #00000030;
+}
+ .container .cv--section__title {
+     color: #d24c4b;
+     margin-top: 1.5rem;
+     margin-bottom: 0.5rem;
+     font-size: 1.8rem;
+}
+ .container .cv--section:last-child {
+     border-bottom: none;
+}
+ .container .cv--section ul {
+     padding-left: 2rem;
+}
+ .container .cv--section strong {
+     letter-spacing: 0.2rem;
+}
+ .single-list {
+     display: flex;
+     flex-direction: column;
+}
+ a {
+     color: #9b9b9b;
+}
+ @media only screen and (max-width: 1440px) {
+     body {
+         font-size: 1.2rem;
+    }
+     .cv--section__title {
+         font-size: 1.3rem;
+    }
+     .container .cv {
+         width: 60%;
+    }
+     .container .cv--header__details {
+         justify-content: space-around;
+    }
+}
+ @media only screen and (max-width: 900px) {
+     body {
+         font-size: 1.2rem;
+    }
+     .cv--section__title {
+         font-size: 1.3rem;
+    }
+     .container .cv {
+         width: 60%;
+    }
+     .container .cv--header__details {
+         justify-content: space-around;
+    }
+     .container .cv--header__details h1 {
+         font-size: 2rem;
+    }
+}
+ @media only screen and (max-width: 650px) {
+     body {
+         font-size: 1.3rem;
+    }
+     .cv--section__title {
+         font-size: 1.3rem;
+    }
+     .container .cv {
+         width: 100%;
+         padding: none;
+    }
+     .container .cv--header {
+         padding: 1rem;
+    }
+     .container .cv--header__details {
+         justify-content: space-around;
+    }
+     .container .cv--header__details h1 {
+         font-size: 2rem;
+    }
+}
+ 
     </style>
   </head>
   <body>
-    <fieldset >
-      <legend align="center">
-        
-        <h2>
-          O’ PETERS, TOMMY STEVEN
-        </h1>
-        <p>
-            Email: tommyopeters@gmail.com 
-        </p>
-        <p>
-            Phone Number: +234 817 212 7320
-        </p>
-        <img width="50px" src="https://res.cloudinary.com/tommyopeters/image/upload/v1566519891/DSC_0553_compressed_vwkamw.jpg">
-      </legend>
-
-      <fieldset>
-          <legend>
-          	<u><h3    >PROFILE:</h3   ></u>
-          </legend>
-          <p>
-            Passionate about designing and programming software and web applications
-            directed at providing solutions.
-          </p>
-      </fieldset>
-
-      <fieldset>
-          <legend>
-          	<h3   >
-          	  <u>TECHNICAL SKILLS:</u>
-          	</h3  >
-          </legend>
+    <div class="container">
+        <div class="cv">
+          <div class="cv--header">
+            <div class="cv--header__img">
+              <img src="https://res.cloudinary.com/tommyopeters/image/upload/v1566519891/DSC_0553_compressed_vwkamw.jpg"/>
+            </div>
+            <div class="cv--header__details">
+                <h1 class="cv--header__name">O’ PETERS, TOMMY STEVEN</h1> 
+                <div class="cv--header__details__inner">
+                    <span class="cv--header__span"><strong>Email:</strong> tommyopeters@gmail.com</span> 
+                    <span class="cv--header__number"><strong>Phone Number:</strong> +234 8172127320</span>
+                </div>
+            </div>
+          </div>
     
-        <ul>
-          <li>
-            Programming Technologies: HTML/CSS, JavaScript, PHP, Python, C++ (prior
-            knowledge), Node.js (prior knowledge), WordPress.
-          </li>
-          <li>
-            Programming Frameworks/Libraries: React (Redux, Mobx), React Native,
-            SASS, jQuery, Bootstrap.
-          </li>
-          <li>
-            Methodology: Agile/Scrum.
-          </li>
-          <li>
-            UI/UX Designing: Photoshop, Illustrator, CorelDraw, Fireworks.
-          </li>
-          <li>
-            Wireframing: Adobe XD, PowerPoint.
-          </li>
-          Version Control: Git, GitHub. .
-          <li>
-            Graphics Design.
-          </li>
-          <li>
-            Photography and Videography.
-          </li>
-          <li>
-            Video Editing: Premiere Pro, After Effects.
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset>
-          <legend>
-          	<h3   >
-          	  <u>OTHER SKILLS:</u>
-          	</h3  >
-          </legend>
-          <ul>
-              <li>
-                Languages: Fluent in English, Yoruba and 30% proficient in French.
-              </li>
-              <li>
-                Public Speaking.
-              </li>
-          </ul>
-      </fieldset>
+          <div class="cv--body">
+            <div class="cv--section">
+              <h3 class="cv--section__title">ABOUT ME</h3>
+              <p class="cv--section__body"> 	Passionate about designing and programming software and web
+              applications directed at providing solutions. </p>
+            </div>
 
-      <fieldset>
-          <legend>
-          	<h3   >
-          	  <u>WORK EXPERIENCE:</u>
-          	</h3  >
-          </legend>
-          <ul>
-              <li>
-                  <p>
-                    Freelance Web Designer
-                  </p>
-                  <p>
-                    Position: Self-Employed Web Designer
-                  </p> <em>08/12/2018 – 29/08/2019</em>
-              </li>
-          </ul>
-      </fieldset>
-
-      <fieldset>
-          <legend>
-          	<h3   >
-          	  <u>EDUCATION:</u>
-          	</h3  >
-          </legend>
-          <ul>
-              <li>
-                  <p>
-                    University of Lagos, Akoka, Lagos State.
-                  </p>
-                  <p>
-                    B.Sc. Electrical/Electronics Engineering
-                  </p>
-                  <em>09/2012 – 01/2020</em>
-              </li>
-          </ul>
-      </fieldset>
-
-      <fieldset>
-          <legend>
-              <h3   >
-                <u>CERTIFICATION:</u>
-              </h3  >
-          </legend>
-          <ul>
-              <li>
-                  <p>
-                    JavaScript, Ranking in The Top 10% - (01/07/2019)
-                  </p>
-                  <a href="https://www.testdome.com/cert/4545ea496e364cd886ef4a80b08ec15e">
-                    https://www.testdome.com/cert/4545ea496e364cd886ef4a80b08ec15e
-                  </a>
-              </li>
-              <li>
-                  <p>
-                    HTML/CSS and JavaScript, Ranking in The Top 10% - (01/07/2019)
-                  </p>
-                  <a href="https://www.testdome.com/cert/4545ea496e364cd886ef4a80b08ec15e">
-                    https://www.testdome.com/cert/4545ea496e364cd886ef4a80b08ec15e
-                  </a>
-              </li>
-          </ul>
-      </fieldset>
-    </fieldset>
+            
+    
+            <div class="cv--section">
+              <h3 class="cv--section__title">TECHNICAL SKILLS</h3>
+              <p class="cv--section__body">
+                  <ul>
+                      <li>
+                          Programming Technologies: HTML/CSS, JavaScript, PHP, Python, C++,
+                          Node.js, WordPress. 
+                      </li>
+                      <li>
+                          Programming Frameworks/Libraries: React (Redux,
+                          Thunk, Mobx), React Native, SASS, jQuery, Bootstrap. 
+                      </li>
+                      <li>
+                          Methodology:
+                          Agile/Scrum. 
+                      </li>
+                      <li>
+                          UI/UX Designing: Photoshop, Illustrator, CorelDraw,
+                          Fireworks. 
+                      </li>
+                      <li>
+                          Wireframing: Adobe XD, PowerPoint. 
+                      </li>
+                      <li>
+                          Version Control: Git,
+                          GitHub.
+                      </li> 
+                      <li>
+                          Graphics Design: Photography and Videography. 
+                      </li>
+                      <li>
+                          Video Editing:
+                          Premiere Pro, After Effects.
+                      </li>
+                  </ul>
+              </p>
+            </div>
+    
+            <div class="cv--section">
+              <h3 class="cv--section__title">OTHER SKILLS</h3>
+              <p class="cv--section__body">
+                  Languages: Fluent in English, Yoruba and 30% proficient in French.
+                  Public Speaking.
+              </p>
+            </div>
+    
+            <div class="cv--section">
+              <h3 class="cv--section__title">WORK EXPERIENCE</h3>
+              <p class="cv--section__body">
+                  <ul>
+                      <li class="single-list">
+                          <span>Freelance Web Designer</span> <span>Position: Self-Employed Web Designer</span>  08/12/2018
+                          – 29/08/2019
+                        </span>
+                      </li>
+                  </ul>
+            </div>
+    
+            <div class="cv--section">
+              <p class="cv--section__body">
+                  <h3 class="cv--section__title">EDUCATION</h3>
+                  <ul>
+                      <li class="single-list">
+                          <span>University of Lagos, Akoka, Lagos State.</span> <span> 	B.Sc. Electrical/Electronics
+                          Engineering </span> <span> 	<i>09/2012 – 01/2020</i> </span>
+                      </li>
+                  </ul>
+              </p>
+            </div>
+    
+            <div class="cv--section">
+              <p class="cv--section__body">
+                  <h3 class="cv--section__title">CERTIFICATION</h3>
+                  <ul>
+                      <li class="single-list">
+                          <span>JavaScript, Ranking in The Top 10% - (01/07/2019)</span>
+                          <span><a href="http://www.testdome.com/cert/edc1195173ed4514bc8060fc5f38cfc6">https://www.testdome.com/cert/edc1195173ed4514bc8060fc5f38cfc6</a></span>
+                      </li>
+                      <li class="single-list">
+                          <span>HTML/CSS and JavaScript, Ranking in The Top 10% - (01/07/2019)</span>
+                          <span><a href="https://www.testdome.com/cert/4545ea496e364cd886ef4a80b08ec15e">https://www.testdome.com/cert/4545ea496e364cd886ef4a80b08ec15e</a></span>
+                      </li>
+                  </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
   </body>
 </html>
